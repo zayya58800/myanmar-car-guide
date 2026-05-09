@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Myanmar Car Guide - ကားဝယ်ယူရောင်းချခြင်းလမ်းညွှန် | 缅甸二手车指南</title>
+  <meta name="description" content="Myanmar used car buying and selling guide in Myanmar, Chinese, and English. ကားအသုံးပြုဝယ်ယူရောင်းချခြင်းလမ်းညွှန် / 缅甸二手车买卖攻略大全">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-brand">🚗 Myanmar Car Guide</a>
+      <button class="hamburger" id="hamburger">☰</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#home" data-i18n="nav_home">Home</a>
+        <a href="#models" data-i18n="nav_models">Car Models</a>
+        <a href="#guide" data-i18n="nav_guide">Buying Guide</a>
+        <a href="#listings" data-i18n="nav_listings">Listings</a>
+        <a href="#inspection" data-i18n="nav_inspection">Inspection</a>
+        <a href="#prices" data-i18n="nav_prices">Price Reference</a>
+        <a href="#glossary" data-i18n="nav_glossary">Glossary</a>
+        <a href="#comments" data-i18n="nav_comments">Comments</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </div>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="my">မြန်</button>
+        <button class="lang-btn" data-lang="cn">中文</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1 data-i18n="hero_title">Your Complete Myanmar <br>Used Car Guide</h1>
+      <p class="hero-sub" data-i18n="hero_sub">Buying or selling a used car in Myanmar? We've got you covered with expert tips, price references, and trilingual guides.</p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">50+</span><span data-i18n="hero_stat1">Car Models</span></div>
+        <div class="stat"><span class="stat-num">100+</span><span data-i18n="hero_stat2">Tips & Guides</span></div>
+        <div class="stat"><span class="stat-num">3</span><span data-i18n="hero_stat3">Languages</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Features -->
+  <section class="features">
+    <div class="container">
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📖</div>
+          <h3 data-i18n="feat1_title">Buying Guide</h3>
+          <p data-i18n="feat1_desc">Step-by-step guide from inspection to ownership transfer.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3 data-i18n="feat2_title">Price Reference</h3>
+          <p data-i18n="feat2_desc">Current market prices for popular used cars in Myanmar.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔤</div>
+          <h3 data-i18n="feat3_title">Trilingual Glossary</h3>
+          <p data-i18n="feat3_desc">Myanmar-Chinese-English car term translations.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚠️</div>
+          <h3 data-i18n="feat4_title">Scam Alerts</h3>
+          <p data-i18n="feat4_desc">Common tricks and how to avoid them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Car Models -->
+  <section id="models" class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="models_title">🔥 Popular Car Models in Myanmar</h2>
+      <p class="section-sub" data-i18n="models_sub">Most searched used cars with trilingual names</p>
+      <div class="car-grid" id="car-grid">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Buying Guide -->
+  <section id="guide" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title" data-i18n="guide_title">📋 Complete Buying Guide</h2>
+      <div class="guide-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h3 data-i18n="step1_title">Set Your Budget</h3>
+            <p data-i18n="step1_desc">Know your budget including transfer fees, taxes, and insurance. Typically add 10-15% on top of the car price.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h3 data-i18n="step2_title">Research Models</h3>
+            <p data-i18n="step2_desc">Compare fuel economy, spare parts availability, and resale value. Japanese cars (Toyota, Honda, Suzuki) are most popular in Myanmar.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h3 data-i18n="step3_title">Check the Car History</h3>
+            <p data-i18n="step3_desc">Verify registration documents, check for accident history, and ensure no outstanding loans on the vehicle.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h3 data-i18n="step4_title">Inspection Checklist</h3>
+            <p data-i18n="step4_desc">Check engine condition, transmission, AC, tires, chassis rust, and electrical systems. Bring a mechanic if possible.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <h3 data-i18n="step5_title">Negotiate Smartly</h3>
+            <p data-i18n="step5_desc">Know the market price beforehand. Point out any issues found during inspection to negotiate a fair price.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">6</div>
+          <div class="step-content">
+            <h3 data-i18n="step6_title">Complete Transfer</h3>
+            <p data-i18n="step6_desc">Handle ownership transfer at the relevant government office. Get all paperwork signed and notarized.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scam Alerts -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="scam_title">🚨 Scam Alerts & How to Avoid</h2>
+      <div class="scam-list">
+        <div class="scam-item">
+          <div class="scam-icon">🔴</div>
+          <div>
+            <h3 data-i18n="scam1_title">"Too Good to Be True" Prices</h3>
+            <p data-i18n="scam1_desc">If the price is significantly below market value, it's likely a scam. Always verify with actual market prices.</p>
+          </div>
+        </div>
+        <div class="scam-item">
+          <div class="scam-icon">🔴</div>
+          <div>
+            <h3 data-i18n="scam2_title">Fake Documents</h3>
+            <p data-i18n="scam2_desc">Check registration papers at the transport department. Never buy without verified documentation.</p>
+          </div>
+        </div>
+        <div class="scam-item">
+          <div class="scam-icon">🔴</div>
+          <div>
+            <h3 data-i18n="scam3_title">Deposit Scams</h3>
+            <p data-i18n="scam3_desc">Never pay a deposit before seeing the car in person. Scammers ask for deposits and disappear.</p>
+          </div>
+        </div>
+        <div class="scam-item">
+          <div class="scam-icon">🔴</div>
+          <div>
+            <h3 data-i18n="scam4_title">Odometer Tampering</h3>
+            <p data-i18n="scam4_desc">Check for signs of odometer rollback. Compare wear on pedals, steering wheel, and seats with the mileage shown.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Price Reference -->
+  <section id="prices" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title" data-i18n="price_title">💰 Used Car Price Reference (Myanmar)</h2>
+      <p class="section-sub" data-i18n="price_sub">Approximate market prices in Myanmar Kyat (MMK) — Updated 2026</p>
+      <div class="price-table-wrapper">
+        <table class="price-table" id="price-table">
+          <thead>
+            <tr>
+              <th data-i18n="th_model">Model</th>
+              <th data-i18n="th_year">Year</th>
+              <th data-i18n="th_price">Price (MMK)</th>
+              <th data-i18n="th_price_usd">Price (USD est.)</th>
+            </tr>
+          </thead>
+          <tbody id="price-tbody">
+            <!-- Filled by JS -->
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note" data-i18n="price_note">* Prices are estimates and may vary by condition, location, and market fluctuations.</p>
+    </div>
+  </section>
+
+  <!-- Glossary / Translation -->
+  <section id="glossary" class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="glossary_title">🔤 Car Terms Glossary</h2>
+      <p class="section-sub" data-i18n="glossary_sub">Trilingual translation: Myanmar ⇄ Chinese ⇄ English</p>
+      <div class="glossary-controls">
+        <input type="text" id="glossary-search" placeholder="Search terms..." data-i18n-placeholder="search_placeholder">
+        <div class="glossary-filter">
+          <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All</button>
+          <button class="filter-btn" data-filter="engine" data-i18n="filter_engine">Engine</button>
+          <button class="filter-btn" data-filter="body" data-i18n="filter_body">Body</button>
+          <button class="filter-btn" data-filter="interior" data-i18n="filter_interior">Interior</button>
+          <button class="filter-btn" data-filter="document" data-i18n="filter_doc">Documents</button>
+        </div>
+      </div>
+      <div class="glossary-table-wrapper">
+        <table class="glossary-table" id="glossary-table">
+          <thead>
+            <tr>
+              <th>မြန်မာ (Myanmar)</th>
+              <th>中文 (Chinese)</th>
+              <th>English</th>
+              <th data-i18n="th_category">Category</th>
+            </tr>
+          </thead>
+          <tbody id="glossary-tbody">
+            <!-- Filled by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selling Tips -->
+  <section class="section bg-dark">
+    <div class="container">
+      <h2 class="section-title light" data-i18n="sell_title">💡 Selling Your Car?</h2>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <h3>📸</h3>
+          <h4 data-i18n="sell1_title">Take Great Photos</h4>
+          <p data-i18n="sell1_desc">Clean your car thoroughly. Take photos in good lighting from multiple angles. Include interior and engine bay.</p>
+        </div>
+        <div class="tip-card">
+          <h3>📝</h3>
+          <h4 data-i18n="sell2_title">Write a Detailed Listing</h4>
+          <p data-i18n="sell2_desc">Include year, mileage, service history, any modifications, and reasons for selling. Honesty builds trust.</p>
+        </div>
+        <div class="tip-card">
+          <h3>💰</h3>
+          <h4 data-i18n="sell3_title">Price It Right</h4>
+          <p data-i18n="sell3_desc">Research similar listings. Price competitively but leave room for negotiation.</p>
+        </div>
+        <div class="tip-card">
+          <h3>📢</h3>
+          <h4 data-i18n="sell4_title">Advertise Everywhere</h4>
+          <p data-i18n="sell4_desc">Post on Facebook Marketplace, CarNet, and local car groups. The more eyes, the faster the sale.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="faq_title">❓ Frequently Asked Questions</h2>
+      <div class="faq-list" id="faq-list">
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            <span data-i18n="faq1_q">What documents do I need to buy a used car in Myanmar?</span>
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a" data-i18n="faq1_a">You need: (1) Original registration certificate, (2) Identity card, (3) Proof of residence, (4) Tax clearance certificate, (5) Insurance documents. Always verify these at the transport department.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            <span data-i18n="faq2_q">Which is better: importing a car or buying locally?</span>
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a" data-i18n="faq2_a">For most buyers, locally available used cars are more practical. Importing involves high taxes, shipping costs, and long waiting times. However, for specific high-end models, import may be the only option.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            <span data-i18n="faq3_q">How do I check if a car has outstanding loans?</span>
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a" data-i18n="faq3_a">Check with the Road Transport Administration Department. You can also ask the seller for a loan clearance certificate. Never buy a car with outstanding loans - the bank still owns it.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            <span data-i18n="faq4_q">What's the best car for Myanmar's roads?</span>
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a" data-i18n="faq4_a">Toyota Vitz, Honda Fit/Jazz, Suzuki Carry, and Toyota Hilux are extremely popular for their durability, ground clearance, and easy-to-find spare parts. For city driving, small sedans and hatchbacks are ideal.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            <span data-i18n="faq5_q">Can foreign nationals buy cars in Myanmar?</span>
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a" data-i18n="faq5_a">Yes, but with restrictions. Foreigners typically need special permits and can only own cars for personal use. The process is more complex and may require a local agent. Consult a lawyer for the latest regulations.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Car Listings Section ===== -->
+  <section id="listings" class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="listings_title">🏷️ Car Listings</h2>
+      <p class="section-sub" data-i18n="listings_sub">Browse used cars for sale or post your own listing</p>
+
+      <!-- Post a Listing Form -->
+      <div class="listing-form-wrapper">
+        <h3 data-i18n="listings_post_title">📝 Post Your Car for Sale</h3>
+        <form id="listing-form" class="listing-form">
+          <div class="form-row">
+            <input type="text" name="title" placeholder="Car Model / Title" data-i18n-placeholder="listings_title_ph" required>
+          </div>
+          <div class="form-row form-row-3">
+            <input type="number" name="year" placeholder="Year" data-i18n-placeholder="listings_year_ph" required>
+            <input type="text" name="price" placeholder="Price (MMK)" data-i18n-placeholder="listings_price_ph" required>
+            <input type="text" name="mileage" placeholder="Mileage (km)" data-i18n-placeholder="listings_mileage_ph">
+          </div>
+          <div class="form-row">
+            <input type="text" name="location" placeholder="Location" data-i18n-placeholder="listings_loc_ph">
+          </div>
+          <div class="form-row">
+            <textarea name="description" rows="4" placeholder="Description..." data-i18n-placeholder="listings_desc_ph"></textarea>
+          </div>
+          <div class="form-row">
+            <input type="text" name="contact" placeholder="Phone / Email / Facebook" data-i18n-placeholder="listings_contact_ph" required>
+          </div>
+          <div class="form-row upload-row">
+            <label class="upload-label">
+              <span class="upload-icon">📷</span>
+              <span data-i18n="listings_upload">Add Photos (max 3)</span>
+              <input type="file" name="images" accept="image/*" multiple id="image-input" style="display:none">
+            </label>
+            <div class="upload-preview" id="upload-preview"></div>
+            <input type="hidden" name="images_data" id="images-data">
+          </div>
+          <button type="submit" class="btn-primary" data-i18n="listings_submit">Post Listing</button>
+        </form>
+      </div>
+
+      <!-- Active Listings -->
+      <div class="listings-feed">
+        <h3 data-i18n="listings_active">📋 Active Listings</h3>
+        <div id="listings-container">
+          <p class="empty-state" data-i18n="listings_empty">No listings yet. Be the first to post!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Inspection Booking Section ===== -->
+  <section id="inspection" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title" data-i18n="inspection_title">🔧 Book a Car Inspection</h2>
+      <p class="section-sub" data-i18n="inspection_sub">Schedule a professional vehicle inspection before you buy</p>
+
+      <div class="inspection-form-wrapper">
+        <form id="inspection-form" class="inspection-form">
+          <div class="form-row form-row-2">
+            <input type="text" name="car_model" placeholder="Car Model" data-i18n-placeholder="inspection_model_ph" required>
+            <input type="number" name="car_year" placeholder="Year" data-i18n-placeholder="inspection_year_ph" required>
+          </div>
+          <div class="form-row form-row-2">
+            <input type="text" name="name" placeholder="Your Name" data-i18n-placeholder="inspection_name_ph" required>
+            <input type="tel" name="phone" placeholder="Phone Number" data-i18n-placeholder="inspection_phone_ph" required>
+          </div>
+          <div class="form-row form-row-2">
+            <input type="date" name="date" required>
+            <select name="time_slot" required>
+              <option value="" data-i18n="inspection_time_ph">Select time slot</option>
+              <option value="09:00-10:00">09:00 - 10:00</option>
+              <option value="10:00-11:00">10:00 - 11:00</option>
+              <option value="11:00-12:00">11:00 - 12:00</option>
+              <option value="13:00-14:00">13:00 - 14:00</option>
+              <option value="14:00-15:00">14:00 - 15:00</option>
+              <option value="15:00-16:00">15:00 - 16:00</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <textarea name="notes" rows="3" placeholder="Additional notes..." data-i18n-placeholder="inspection_notes_ph"></textarea>
+          </div>
+          <button type="submit" class="btn-primary" data-i18n="inspection_submit">Book Inspection</button>
+        </form>
+      </div>
+
+      <!-- My Bookings -->
+      <div class="bookings-list">
+        <h3 data-i18n="inspection_my">📅 My Booked Inspections</h3>
+        <div id="bookings-container">
+          <p class="empty-state" data-i18n="inspection_empty">No inspections booked yet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Comments Section ===== -->
+  <section id="comments" class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="comments_title">💬 User Comments</h2>
+      <p class="section-sub" data-i18n="comments_sub">Share your experience, tips, or ask questions</p>
+
+      <!-- Comment Form -->
+      <div class="comment-form-wrapper">
+        <form id="comment-form" class="comment-form">
+          <div class="form-row form-row-2">
+            <input type="text" name="comment_name" placeholder="Your Name" data-i18n-placeholder="comments_name_ph" required>
+            <input type="email" name="comment_email" placeholder="Your Email (optional)" data-i18n-placeholder="comments_email_ph">
+          </div>
+          <div class="form-row">
+            <textarea name="comment_text" rows="4" placeholder="Write your comment..." data-i18n-placeholder="comments_text_ph" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" data-i18n="comments_submit">Post Comment</button>
+        </form>
+      </div>
+
+      <!-- Comments Feed -->
+      <div class="comments-feed">
+        <div id="comments-container">
+          <p class="empty-state" data-i18n="comments_empty">No comments yet. Be the first to share!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title" data-i18n="contact_title">📬 Contact Us</h2>
+      <p class="section-sub" data-i18n="contact_sub">Have questions or want to contribute? Reach out!</p>
+      <div class="contact-form">
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="text" name="name" placeholder="Your Name" data-i18n-placeholder="form_name" required>
+          <input type="email" name="email" placeholder="Your Email" data-i18n-placeholder="form_email" required>
+          <textarea name="message" rows="5" placeholder="Your Message" data-i18n-placeholder="form_message" required></textarea>
+          <button type="submit" class="btn-primary" data-i18n="form_send">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>🚗 Myanmar Car Guide</h3>
+          <p data-i18n="footer_desc">Your trusted partner for used car buying and selling in Myanmar. 🇲🇲</p>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer_quick">Quick Links</h4>
+          <a href="#home" data-i18n="nav_home">Home</a>
+          <a href="#models" data-i18n="nav_models">Car Models</a>
+          <a href="#guide" data-i18n="nav_guide">Buying Guide</a>
+          <a href="#listings" data-i18n="nav_listings">Listings</a>
+          <a href="#inspection" data-i18n="nav_inspection">Inspection</a>
+          <a href="#prices" data-i18n="nav_prices">Price Reference</a>
+          <a href="#comments" data-i18n="nav_comments">Comments</a>
+        </div>
+        <div class="footer-disclaimer">
+          <h4 data-i18n="footer_disclaimer">Disclaimer</h4>
+          <p data-i18n="footer_disclaimer_text">Prices and information are for reference only. Always verify with official sources before making any purchase.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Myanmar Car Guide. All rights reserved. 🐾</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js?v=3"></script>
+  <script src="i18n.js?v=3"></script>
+  <script src="app.js?v=3"></script>
+</body>
+</html>
