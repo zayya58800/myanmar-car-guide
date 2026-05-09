@@ -1,228 +1,392 @@
 // ===== Car Models Data (Trilingual) - Updated May 2026 =====
+// Overview cards — detailed year/trim pricing is in priceData below
 const carModels = [
-  // 1300cc家用轿车 category
-  {
-    nameEn: '1300cc Sedan/Hatch (Vios/Fit/Vitz/Swift)',
-    nameMy: '1300cc ကားများ (Vios/Fit/Vitz/Swift)',
-    nameCn: '1300cc家用轿车 (Vios/威驰/Fit/飞度/Vitz/威姿/Swift/雨燕)',
-    price: '60,000,000 - 75,000,000',
-    priceUsd: '$15,000 - $18,750',
-    year: '2010-2018',
-    type: 'hatchback',
-    image: '🚗',
-    desc: '1300cc segment benchmark. The 50-60M range is gone — now 60-75M is the new normal.'
-  },
   {
     nameEn: 'Toyota Vitz',
     nameMy: 'တိုယိုတာ ဗစ်ဇ်',
     nameCn: '丰田威姿',
-    price: '35,000,000 - 55,000,000',
-    priceUsd: '$8,750 - $13,750',
-    year: '2010-2018',
+    price: '28M - 60M',
+    priceUsd: '$7,000 - $15,000',
+    year: '2008-2018',
     type: 'hatchback',
     image: '🚗',
-    desc: '1000cc daily driver favorite. Most affordable entry-level Japanese car.'
+    desc: 'Fuel efficient 1000cc city car. Best for beginners and daily commuting.'
   },
   {
     nameEn: 'Honda Fit / Jazz',
     nameMy: 'ဟွန်ဒါ ဖစ် / ဂျက်ဇ်',
     nameCn: '本田飞度',
-    price: '55,000,000 - 75,000,000',
-    priceUsd: '$13,750 - $18,750',
-    year: '2012-2020',
+    price: '45M - 90M',
+    priceUsd: '$11,250 - $22,500',
+    year: '2010-2020',
     type: 'hatchback',
     image: '🚙',
-    desc: '1300cc hard currency. Extremely value-retaining, a market icon.'
+    desc: 'The most value-retaining compact car in Myanmar. Great for families and young drivers.'
   },
   {
     nameEn: 'Suzuki Swift',
     nameMy: 'ဆူဇူကီး ဆွစ်ဖ်',
     nameCn: '铃木雨燕',
-    price: '35,000,000 - 50,000,000',
-    priceUsd: '$8,750 - $12,500',
-    year: '2012-2020',
+    price: '30M - 70M',
+    priceUsd: '$7,500 - $17,500',
+    year: '2011-2018',
     type: 'hatchback',
     image: '🚗',
-    desc: 'Stylish hatchback, first choice for young drivers.'
-  },
-  // Micro trucks / vans
-  {
-    nameEn: 'Mini Truck / Van (Hijet/Carry)',
-    nameMy: 'ထရပ်ကားသေး / ဗန်ကား (Hijet/Carry)',
-    nameCn: '小货车/微卡 (Hijet/海狮/Carry/卡里)',
-    price: '45,000,000 - 60,000,000',
-    priceUsd: '$11,250 - $15,000',
-    year: '2008-2019',
-    type: 'truck',
-    image: '🛻',
-    desc: 'Average condition from 45M, good condition 50M+. Prices tripled in 3 years.'
-  },
-  {
-    nameEn: '660cc Mini Truck (Old)',
-    nameMy: '660cc ထရပ်ကားသေး (အဟောင်း)',
-    nameCn: '660cc微卡（老款）',
-    price: '18,000,000 - 25,000,000',
-    priceUsd: '$4,500 - $6,250',
-    year: '2004-2010',
-    type: 'truck',
-    image: '🛻',
-    desc: 'Doubled in 3 years. Post-2014 high-spec models are even more expensive.'
-  },
-  {
-    nameEn: 'Suzuki Carry',
-    nameMy: 'ဆူဇူကီး ကယ်ရီ',
-    nameCn: '铃木卡里',
-    price: '45,000,000 - 60,000,000',
-    priceUsd: '$11,250 - $15,000',
-    year: '2008-2019',
-    type: 'truck',
-    image: '🛻',
-    desc: 'Work truck for business. Cheap parts, durable.'
-  },
-  {
-    nameEn: 'Toyota Hilux',
-    nameMy: 'တိုယိုတာ ဟိုင်လပ်',
-    nameCn: '丰田海拉克斯',
-    price: '50,000,000 - 90,000,000',
-    priceUsd: '$12,500 - $22,500',
-    year: '2010-2023',
-    type: 'pickup',
-    image: '🛻',
-    desc: 'Old model from 50M, new Revo can reach 90M+. Legendary durability.'
-  },
-  {
-    nameEn: 'Toyota Crown',
-    nameMy: 'တိုယိုတာ ခရောင်း',
-    nameCn: '丰田皇冠',
-    price: '60,000,000 - 120,000,000',
-    priceUsd: '$15,000 - $30,000',
-    year: '2010-2020',
-    type: 'sedan',
-    image: '🚘',
-    desc: 'Premium business sedan. Early models from 60M. A Myanmar status car.'
-  },
-  {
-    nameEn: 'Toyota Alphard',
-    nameMy: 'တိုယိုတာ အယ်လ်ဖတ်',
-    nameCn: '丰田埃尔法',
-    price: '80,000,000 - 200,000,000',
-    priceUsd: '$20,000 - $50,000',
-    year: '2010-2020',
-    type: 'mpv',
-    image: '🚐',
-    desc: 'The ultimate status symbol. Top-tier luxury MPV.'
+    desc: 'Stylish and fun to drive. Popular with young drivers and women.'
   },
   {
     nameEn: 'Toyota Wish',
     nameMy: 'တိုယိုတာ ဝစ်ရှ်',
     nameCn: '丰田逸致',
-    price: '45,000,000 - 65,000,000',
-    priceUsd: '$11,250 - $16,250',
+    price: '38M - 80M',
+    priceUsd: '$9,500 - $20,000',
+    year: '2009-2017',
+    type: 'mpv',
+    image: '🚐',
+    desc: 'Practical 7-seat MPV. Popular family car with good resale value.'
+  },
+  {
+    nameEn: 'Suzuki Carry',
+    nameMy: 'ဆူဇူကီး ကယ်ရီ',
+    nameCn: '铃木卡里',
+    price: '30M - 70M',
+    priceUsd: '$7,500 - $17,500',
+    year: '2008-2020',
+    type: 'truck',
+    image: '🛻',
+    desc: 'Work truck for business. Cheap parts, durable. Refrigerated conversions from 70M+.'
+  },
+  {
+    nameEn: 'Toyota Hilux',
+    nameMy: 'တိုယိုတာ ဟိုင်လပ်',
+    nameCn: '丰田海拉克斯',
+    price: '50M - 500M',
+    priceUsd: '$12,500 - $37,500',
+    year: '2010-2020',
+    type: 'pickup',
+    image: '🛻',
+    desc: 'The legendary pickup. From Vigo to Revo — unmatched durability.'
+  },
+  {
+    nameEn: 'Toyota Crown',
+    nameMy: 'တိုယိုတာ ခရောင်း',
+    nameCn: '丰田皇冠',
+    price: '55M - 200M',
+    priceUsd: '$13,750 - $50,000',
+    year: '2004-2015+',
+    type: 'sedan',
+    image: '🚘',
+    desc: 'Premium executive sedan. From Royal Saloon to Hybrid. Many listings are overpriced.'
+  },
+  {
+    nameEn: 'Toyota Alphard',
+    nameMy: 'တိုယိုတာ အယ်လ်ဖတ်',
+    nameCn: '丰田埃尔法',
+    price: '80M - 300M',
+    priceUsd: '$20,000 - $75,000',
     year: '2010-2017',
     type: 'mpv',
     image: '🚐',
-    desc: 'Practical 7-seat MPV for families.'
+    desc: 'The ultimate luxury MPV. From standard to Executive Lounge. Many overpriced listings.'
+  },
+  {
+    nameEn: 'Suzuki Ertiga',
+    nameMy: 'ဆူဇူကီး အာတီဂါ',
+    nameCn: '铃木艾提加',
+    price: '45M - 90M',
+    priceUsd: '$11,250 - $22,500',
+    year: '2014-2021',
+    type: 'mpv',
+    image: '🚐',
+    desc: 'Affordable 7-seat family MPV. Hybrid models available from 2018.'
+  },
+  {
+    nameEn: 'Suzuki Alto',
+    nameMy: 'ဆူဇူကီး အယ်လ်တို',
+    nameCn: '铃木奥拓',
+    price: '18M - 40M',
+    priceUsd: '$4,500 - $10,000',
+    year: '2008-2016',
+    type: 'hatchback',
+    image: '🚗',
+    desc: 'Cheapest daily driver. 660cc — great for city commuting on a budget.'
+  },
+  {
+    nameEn: 'Suzuki Jimny',
+    nameMy: 'ဆူဇူကီး ဂျင်နီ',
+    nameCn: '铃木吉姆尼',
+    price: '35M - 800M',
+    priceUsd: '$8,750 - $45,000',
+    year: '2000-2020+',
+    type: 'suv',
+    image: '🚙',
+    desc: 'Off-road legend. Small body, big capability. New JB74 model is extremely expensive.'
+  },
+  {
+    nameEn: 'Suzuki Ciaz',
+    nameMy: 'ဆူဇူကီး စီယက်ဇ်',
+    nameCn: '铃木西亚兹',
+    price: '40M - 75M',
+    priceUsd: '$10,000 - $18,750',
+    year: '2015-2022',
+    type: 'sedan',
+    image: '🚗',
+    desc: 'Family sedan. Decent value but less popular than Toyota/Honda equivalents.'
+  },
+  {
+    nameEn: 'Suzuki Every',
+    nameMy: 'ဆူဇူကီး အက်ဗရီ',
+    nameCn: '铃木Every',
+    price: '25M - 60M',
+    priceUsd: '$6,250 - $15,000',
+    year: '2008-2017',
+    type: 'truck',
+    image: '🛻',
+    desc: 'Delivery van / small business vehicle. High-roof Turbo models from 60M+.'
   }
 ];
 
-// ===== Price Data - Updated May 2026 =====
+// ===== Price Data (Detailed by Year/Trim) - Updated May 2026 =====
 const priceData = [
   // ════════════════════════════════════════════════════════
-  // 一、日本右舵车（JDM）— 市场绝对主力，价格大涨
+  // 一、日本右舵车（JDM）— 市场绝对主力
   // ════════════════════════════════════════════════════════
-  // 1300cc家用轿车
-  { model: '1300cc Sedan (Vios/Fit/Vitz/Swift)', year: '2010-2018', priceMmk: '60-75 M', priceUsd: '$15K - $18.8K', tag: '🔥' },
-  { model: 'Toyota Vitz', year: '2010-2018', priceMmk: '35-55 M', priceUsd: '$8.8K - $13.8K', tag: '🔥' },
-  { model: 'Honda Fit / Jazz', year: '2012-2020', priceMmk: '55-75 M', priceUsd: '$13.8K - $18.8K', tag: '🔥' },
-  { model: 'Suzuki Swift', year: '2012-2020', priceMmk: '35-50 M', priceUsd: '$8.8K - $12.5K', tag: '🔥' },
-  // 小货车
-  { model: 'Mini Truck (Hijet/Carry)', year: '2008-2019', priceMmk: '45-60 M', priceUsd: '$11.3K - $15K', tag: '🔥' },
-  { model: '660cc Mini Truck (Old)', year: '2004-2010', priceMmk: '18-25 M', priceUsd: '$4.5K - $6.3K', tag: '🔥' },
-  // 皮卡/轿车/MPV
-  { model: 'Toyota Hilux', year: '2010-2023', priceMmk: '50-90 M', priceUsd: '$12.5K - $22.5K', tag: '🔥' },
-  { model: 'Toyota Crown', year: '2010-2020', priceMmk: '60-120 M', priceUsd: '$15K - $30K', tag: '🔥' },
-  { model: 'Toyota Alphard', year: '2010-2020', priceMmk: '80-200 M', priceUsd: '$20K - $50K', tag: '🔥' },
-  { model: 'Toyota Wish', year: '2010-2017', priceMmk: '45-65 M', priceUsd: '$11.3K - $16.3K', tag: '🔥' },
+
+  // Toyota Vitz
+  { model: 'Toyota Vitz (2008-2011 Base 1000cc)', year: '2008-2011', trim: 'Base', priceMmk: '28M - 35M', tag: '🔥' },
+  { model: 'Toyota Vitz (2012-2014 Push Start)', year: '2012-2014', trim: 'Mid', priceMmk: '35M - 43M', tag: '🔥' },
+  { model: 'Toyota Vitz (2015-2018 Safety Sense)', year: '2015-2018', trim: 'High', priceMmk: '45M - 58M', tag: '🔥' },
+  { model: 'Toyota Vitz (Low km + YGN Plate)', year: '—', trim: 'Premium', priceMmk: '~60M', tag: '🔥' },
+
+  // Honda Fit / Jazz
+  { model: 'Honda Fit/Jazz (2010-2013 Base 1300cc)', year: '2010-2013', trim: 'Base', priceMmk: '45M - 55M', tag: '🔥' },
+  { model: 'Honda Fit/Jazz (2014-2016 RS/Push Start)', year: '2014-2016', trim: 'Mid', priceMmk: '55M - 68M', tag: '🔥' },
+  { model: 'Honda Fit/Jazz (2017-2020 Hybrid/Sensing)', year: '2017-2020', trim: 'High', priceMmk: '70M - 85M', tag: '🔥' },
+  { model: 'Honda Fit/Jazz (RS Top Trim)', year: '—', trim: 'Premium', priceMmk: '90M+', tag: '🔥' },
+
+  // Suzuki Swift
+  { model: 'Suzuki Swift (2011-2014 Base)', year: '2011-2014', trim: 'Base', priceMmk: '30M - 40M', tag: '🔥' },
+  { model: 'Suzuki Swift (2015-2018 Push Start)', year: '2015-2018', trim: 'Mid', priceMmk: '40M - 52M', tag: '🔥' },
+  { model: 'Suzuki Swift (RS/Sport)', year: '—', trim: 'High', priceMmk: '55M - 70M', tag: '🔥' },
+
+  // Toyota Wish (7-seat MPV)
+  { model: 'Toyota Wish (2009-2012 Base)', year: '2009-2012', trim: 'Base', priceMmk: '38M - 50M', tag: '🔥' },
+  { model: 'Toyota Wish (2013-2015 1.8S)', year: '2013-2015', trim: 'Mid', priceMmk: '50M - 65M', tag: '🔥' },
+  { model: 'Toyota Wish (2016-2017 Push Start + Aero)', year: '2016-2017', trim: 'High', priceMmk: '65M - 80M', tag: '🔥' },
+
+  // Suzuki Carry
+  { model: 'Suzuki Carry (2008-2012 Old)', year: '2008-2012', trim: 'Base', priceMmk: '30M - 42M', tag: '🔥' },
+  { model: 'Suzuki Carry (2013-2017 EFI)', year: '2013-2017', trim: 'New', priceMmk: '42M - 55M', tag: '🔥' },
+  { model: 'Suzuki Carry (2018-2020 AC High)', year: '2018-2020', trim: 'High', priceMmk: '55M - 70M', tag: '🔥' },
+  { model: 'Suzuki Carry (Refrigerated/Commercial)', year: '—', trim: 'Modified', priceMmk: '70M+', tag: '🔥' },
+
+  // Toyota Hilux
+  { model: 'Toyota Hilux (2010-2013 Vigo)', year: '2010-2013', trim: 'Vigo', priceMmk: '50M - 70M', tag: '🔥' },
+  { model: 'Toyota Hilux (2014-2016 Vigo Champ)', year: '2014-2016', trim: 'Vigo Champ', priceMmk: '70M - 90M', tag: '🔥' },
+  { model: 'Toyota Hilux (2017-2020 Revo)', year: '2017-2020', trim: 'Revo', priceMmk: '090M - 130M', tag: '🔥' },
+  { model: 'Toyota Hilux (Rogue/Rocco)', year: '—', trim: 'High', priceMmk: '150M+', tag: '🔥' },
+
+  // Toyota Crown
+  { model: 'Toyota Crown (2004-2008 Royal Saloon)', year: '2004-2008', trim: 'Royal', priceMmk: '55M - 80M', tag: '🔥' },
+  { model: 'Toyota Crown (2009-2012 Athlete)', year: '2009-2012', trim: 'Athlete', priceMmk: '080M - 100M', tag: '🔥' },
+  { model: 'Toyota Crown (Majesta V8)', year: '—', trim: 'Majesta', priceMmk: '100M - 150M', tag: '🔥' },
+  { model: 'Toyota Crown (2015+ Hybrid)', year: '2015+', trim: 'Hybrid', priceMmk: '130M - 200M', tag: '🔥' },
+
+  // Toyota Alphard
+  { model: 'Toyota Alphard (2010-2013 Standard)', year: '2010-2013', trim: 'Base', priceMmk: '080M - 120M', tag: '🔥' },
+  { model: 'Toyota Alphard (2014-2017 SC)', year: '2014-2017', trim: 'SC', priceMmk: '130M - 200M', tag: '🔥' },
+  { model: 'Toyota Alphard (Executive Lounge)', year: '—', trim: 'Top', priceMmk: '200M - 300M+', tag: '🔥' },
+
+  // Suzuki Ertiga
+  { model: 'Suzuki Ertiga (2014-2017 Base)', year: '2014-2017', trim: 'Base', priceMmk: '45M - 60M', tag: '🔥' },
+  { model: 'Suzuki Ertiga (2018-2021 Hybrid)', year: '2018-2021', trim: 'Hybrid', priceMmk: '65M - 85M', tag: '🔥' },
+  { model: 'Suzuki Ertiga (GLX Top)', year: '—', trim: 'GLX', priceMmk: '~90M', tag: '🔥' },
+
+  // Suzuki Alto
+  { model: 'Suzuki Alto (2008-2012 660cc)', year: '2008-2012', trim: 'Base', priceMmk: '18M - 28M', tag: '🔥' },
+  { model: 'Suzuki Alto (2013-2016 New)', year: '2013-2016', trim: 'New', priceMmk: '25M - 38M', tag: '🔥' },
+  { model: 'Suzuki Alto (Turbo/High)', year: '—', trim: 'Turbo', priceMmk: '040M+', tag: '🔥' },
+
+  // Suzuki Jimny
+  { model: 'Suzuki Jimny (2000-2010 Old)', year: '2000-2010', trim: 'Old', priceMmk: '35M - 55M', tag: '🔥' },
+  { model: 'Suzuki Jimny (2011-2017 New)', year: '2011-2017', trim: 'New', priceMmk: '60M - 90M', tag: '🔥' },
+  { model: 'Suzuki Jimny (JB74 新世代)', year: '2018+', trim: 'JB74', priceMmk: '100M - 180M', tag: '🔥' },
+
+  // Suzuki Ciaz
+  { model: 'Suzuki Ciaz (2015-2018 Base)', year: '2015-2018', trim: 'Base', priceMmk: '40M - 55M', tag: '🔥' },
+  { model: 'Suzuki Ciaz (2019-2022 GLX)', year: '2019-2022', trim: 'GLX', priceMmk: '60M - 75M', tag: '🔥' },
+
+  // Suzuki Every
+  { model: 'Suzuki Every (2008-2012 Base)', year: '2008-2012', trim: 'Base', priceMmk: '25M - 38M', tag: '🔥' },
+  { model: 'Suzuki Every (2013-2017 Join Turbo)', year: '2013-2017', trim: 'Turbo', priceMmk: '40M - 55M', tag: '🔥' },
+  { model: 'Suzuki Every (High Roof Turbo)', year: '—', trim: 'High', priceMmk: '060M+', tag: '🔥' },
   
   // ════════════════════════════════════════════════════════
-  // 二、电动车（EV）— 需求旺盛，价格普涨
+  // 二、电动车（EV）— Myanmar 2026 Market
   // ════════════════════════════════════════════════════════
-  { model: 'Entry EV (Wuling Mini EV etc.)', year: '2022-2024', priceMmk: '80-120 M', priceUsd: '$20K - $30K', tag: '⚡' },
-  { model: 'Mid-Range EV (BYD Dolphin/Atto 3/Neta V)', year: '2023-2025', priceMmk: '150-250 M', priceUsd: '$37.5K - $62.5K', tag: '⚡' },
-  { model: 'Premium EV (BYD Seal/Voyah FREE)', year: '2024', priceMmk: '300-350 M', priceUsd: '$75K - $87.5K', tag: '⚡' },
-  
+
+  // BYD Dolphin
+  { model: 'BYD Dolphin (Standard Range)', year: '2023', trim: 'Base', priceMmk: '65M - 85M', tag: '⚡' },
+  { model: 'BYD Dolphin (Extended Range)', year: '2024', trim: 'High', priceMmk: '85M - 100M', tag: '⚡' },
+  { model: 'BYD Dolphin (Top + Low km)', year: '—', trim: 'Premium', priceMmk: '~120M', tag: '⚡' },
+
+  // BYD Atto 3
+  { model: 'BYD Atto 3 (Standard)', year: '2023', trim: 'Base', priceMmk: '95M - 300M', tag: '⚡' },
+  { model: 'BYD Atto 3 (Long Range)', year: '2024', trim: 'High', priceMmk: '130M - 170M', tag: '⚡' },
+  { model: 'BYD Atto 3 (Top Premium)', year: '—', trim: 'Premium', priceMmk: '~180M', tag: '⚡' },
+
+  // BYD Seal
+  { model: 'BYD Seal (Standard)', year: '2024', trim: 'Base', priceMmk: '150M - 200M', tag: '⚡' },
+  { model: 'BYD Seal (AWD Performance)', year: '2024', trim: 'High', priceMmk: '200M - 280M', tag: '⚡' },
+
+  // BYD Yangwang / Premium
+  { model: 'BYD Yangwang / Premium Series', year: '2024', trim: '—', priceMmk: '300M - 1,000M+', tag: '⚡' },
+
+  // NETA V
+  { model: 'NETA V (Standard)', year: '2023-2024', trim: 'Base', priceMmk: '50M - 70M', tag: '⚡' },
+  { model: 'NETA V (High Trim)', year: '—', trim: 'High', priceMmk: '70M - 85M', tag: '⚡' },
+
+  // NETA X
+  { model: 'NETA X SUV', year: '2024', trim: '—', priceMmk: '090M - 130M', tag: '⚡' },
+
+  // MG4 EV
+  { model: 'MG4 EV (Standard)', year: '2023-2024', trim: 'Base', priceMmk: '85M - 200M', tag: '⚡' },
+  { model: 'MG4 EV (Performance)', year: '—', trim: 'High', priceMmk: '130M+', tag: '⚡' },
+
+  // Tesla Model 3
+  { model: 'Tesla Model 3 (2019-2021 Used)', year: '2019-2021', trim: 'Used', priceMmk: '500M - 2.500M', tag: '⚡' },
+  { model: 'Tesla Model 3 (2022+ New)', year: '2022+', trim: 'New', priceMmk: '250M - 400M', tag: '⚡' },
+
+  // Tesla Model Y
+  { model: 'Tesla Model Y', year: '2022-2024', trim: '—', priceMmk: '300M - 500M', tag: '⚡' },
+
+  // Wuling Mini EV
+  { model: 'Wuling Mini EV', year: '2023-2024', trim: '—', priceMmk: '25M - 45M', tag: '⚡' },
+
+  // Zeekr X
+  { model: 'Zeekr X', year: '2024', trim: '—', priceMmk: '200M - 300M', tag: '⚡' },
+
+  // Leapmotor
+  { model: 'Leapmotor / 零跑', year: '2024', trim: '—', priceMmk: '070M - 120M', tag: '⚡' },
+
   // ════════════════════════════════════════════════════════
-  // 三、韩国车（现代/起亚）— 非主流，价格偏低
+  // 三、韩国车（现代/起亚）
   // ════════════════════════════════════════════════════════
-  { model: 'Hyundai Elantra', year: '2012-2017', priceMmk: '25-35 M', priceUsd: '$6.3K - $8.8K', tag: '📉' },
-  { model: 'Hyundai Accent', year: '2012-2017', priceMmk: '20-30 M', priceUsd: '$5K - $7.5K', tag: '📉' },
-  { model: 'Kia Forte', year: '2012-2017', priceMmk: '22-32 M', priceUsd: '$5.5K - $8K', tag: '📉' },
-  { model: 'Kia K3', year: '2014-2018', priceMmk: '25-38 M', priceUsd: '$6.3K - $9.5K', tag: '📉' },
-  { model: 'Hyundai Santa Fe', year: '2010-2015', priceMmk: '30-50 M', priceUsd: '$7.5K - $12.5K', tag: '📉' },
-  { model: 'Kia Sorento', year: '2010-2015', priceMmk: '30-50 M', priceUsd: '$7.5K - $12.5K', tag: '📉' },
+  { model: 'Hyundai Elantra', year: '2012-2017', trim: '—', priceMmk: '25M - 35M', tag: '📉' },
+  { model: 'Hyundai Accent', year: '2012-2017', trim: '—', priceMmk: '2000M - 30M', tag: '📉' },
+  { model: 'Kia Forte', year: '2012-2017', trim: '—', priceMmk: '22M - 32M', tag: '📉' },
+  { model: 'Kia K3', year: '2014-2018', trim: '—', priceMmk: '25M - 38M', tag: '📉' },
+  { model: 'Hyundai Santa Fe', year: '2010-2015', trim: '—', priceMmk: '30M - 50M', tag: '📉' },
+  { model: 'Kia Sorento', year: '2010-2015', trim: '—', priceMmk: '30M - 50M', tag: '📉' },
 ];
+
+// ===== Price Data Model Translations (for trilingual display) =====
+const modelTr = {};
+// Helper to add translation
+function mt(en, my, cn) { modelTr[en] = { my, cn }; }
+
+// Toyota Vitz
+mt('Toyota Vitz (2008-2011 Base 1000cc)', 'Toyota Vitz (၂၀၀၈-၂၀၁၁ အခြေခံ 1000cc)', '丰田威姿（2008-2011 基础版 1000cc）');
+mt('Toyota Vitz (2012-2014 Push Start)', 'Toyota Vitz (၂၀၁၂-၂၀၁၄ Push Start)', '丰田威姿（2012-2014 Push Start）');
+mt('Toyota Vitz (2015-2018 Safety Sense)', 'Toyota Vitz (၂၀၁၅-၂၀၁၈ Safety Sense)', '丰田威姿（2015-2018 Safety Sense）');
+mt('Toyota Vitz (Low km + YGN Plate)', 'Toyota Vitz (ကီလိုနည်း + YGN နံပါတ်)', '丰田威姿（精品低公里+YGN好牌）');
+
+// Honda Fit/Jazz
+mt('Honda Fit/Jazz (2010-2013 Base 1300cc)', 'Honda Fit/Jazz (၂၀၁၀-၂၀၁၃ အခြေခံ 1300cc)', '本田飞度（2010-2013 基础版 1300cc）');
+mt('Honda Fit/Jazz (2014-2016 RS/Push Start)', 'Honda Fit/Jazz (၂၀၁၄-၂၀၁၆ RS/Push Start)', '本田飞度（2014-2016 RS/Push Start）');
+mt('Honda Fit/Jazz (2017-2020 Hybrid/Sensing)', 'Honda Fit/Jazz (၂၀၁၇-၂၀၂၀ Hybrid/Sensing)', '本田飞度（2017-2020 Hybrid/Sensing）');
+mt('Honda Fit/Jazz (RS Top Trim)', 'Honda Fit/Jazz (RS အဆင့်မြင့်)', '本田飞度（RS顶配）');
+
+// Suzuki Swift
+mt('Suzuki Swift (2011-2014 Base)', 'Suzuki Swift (၂၀၁၁-၂၀၁၄ အခြေခံ)', '铃木雨燕（2011-2014 基础版）');
+mt('Suzuki Swift (2015-2018 Push Start)', 'Suzuki Swift (၂၀၁၅-၂၀၁၈ Push Start)', '铃木雨燕（2015-2018 Push Start）');
+mt('Suzuki Swift (RS/Sport)', 'Suzuki Swift (RS/Sport)', '铃木雨燕（RS/Sport 高配）');
+
+// Toyota Wish
+mt('Toyota Wish (2009-2012 Base)', 'Toyota Wish (၂၀၀၉-၂၀၁၂ အခြေခံ)', '丰田逸致（2009-2012 基础版）');
+mt('Toyota Wish (2013-2015 1.8S)', 'Toyota Wish (၂၀၁၃-၂၀၁၅ 1.8S)', '丰田逸致（2013-2015 1.8S高配）');
+mt('Toyota Wish (2016-2017 Push Start + Aero)', 'Toyota Wish (၂၀၁၆-၂၀၁၇ Push Start + Aero)', '丰田逸致（2016-2017 Push Start+Aero）');
+
+// Suzuki Carry
+mt('Suzuki Carry (2008-2012 Old)', 'Suzuki Carry (၂၀၀၈-၂၀၁၂ အဟောင်း)', '铃木卡里（2008-2012 老款）');
+mt('Suzuki Carry (2013-2017 EFI)', 'Suzuki Carry (၂၀၁၃-၂၀၁၇ EFI)', '铃木卡里（2013-2017 EFI新款）');
+mt('Suzuki Carry (2018-2020 AC High)', 'Suzuki Carry (၂၀၁၈-၂၀၂၀ အအေးခံမြင့်)', '铃木卡里（2018-2020 冷气高配）');
+mt('Suzuki Carry (Refrigerated/Commercial)', 'Suzuki Carry (အအေးခန်း/စီးပွားရေးပြုပြင်ထား)', '铃木卡里（冷藏/商业改装版）');
+
+// Toyota Hilux
+mt('Toyota Hilux (2010-2013 Vigo)', 'Toyota Hilux (၂၀၁၀-၂၀၁၃ Vigo)', '丰田海拉克斯（2010-2013 Vigo）');
+mt('Toyota Hilux (2014-2016 Vigo Champ)', 'Toyota Hilux (၂၀၁၄-၂၀၁၆ Vigo Champ)', '丰田海拉克斯（2014-2016 Vigo Champ）');
+mt('Toyota Hilux (2017-2020 Revo)', 'Toyota Hilux (၂၀၁၇-၂၀၂၀ Revo)', '丰田海拉克斯（2017-2020 Revo）');
+mt('Toyota Hilux (Rogue/Rocco)', 'Toyota Hilux (Rogue/Rocco)', '丰田海拉克斯（Rogue/Rocco高配）');
+
+// Toyota Crown
+mt('Toyota Crown (2004-2008 Royal Saloon)', 'Toyota Crown (၂၀၀၄-၂၀၀၈ Royal Saloon)', '丰田皇冠（2004-2008 Royal Saloon）');
+mt('Toyota Crown (2009-2012 Athlete)', 'Toyota Crown (၂၀၀၉-၂၀၁၂ Athlete)', '丰田皇冠（2009-2012 Athlete）');
+mt('Toyota Crown (Majesta V8)', 'Toyota Crown (Majesta V8)', '丰田皇冠（Majesta V8顶配）');
+mt('Toyota Crown (2015+ Hybrid)', 'Toyota Crown (၂၀၁၅+ Hybrid)', '丰田皇冠（2015+ 新款Hybrid）');
+
+// Toyota Alphard
+mt('Toyota Alphard (2010-2013 Standard)', 'Toyota Alphard (၂၀၁၀-၂၀၁၃ ပုံမှန်)', '丰田埃尔法（2010-2013 标准版）');
+mt('Toyota Alphard (2014-2017 SC)', 'Toyota Alphard (၂၀၁၄-၂၀၁၇ SC)', '丰田埃尔法（2014-2017 SC Package）');
+mt('Toyota Alphard (Executive Lounge)', 'Toyota Alphard (Executive Lounge)', '丰田埃尔法（Executive Lounge顶配）');
+
+// Suzuki Ertiga
+mt('Suzuki Ertiga (2014-2017 Base)', 'Suzuki Ertiga (၂၀၁၄-၂၀၁၇ အခြေခံ)', '铃木艾提加（2014-2017 基础版）');
+mt('Suzuki Ertiga (2018-2021 Hybrid)', 'Suzuki Ertiga (၂၀၁၈-၂၀၂၁ Hybrid)', '铃木艾提加（2018-2021 Hybrid）');
+mt('Suzuki Ertiga (GLX Top)', 'Suzuki Ertiga (GLX အဆင့်မြင့်)', '铃木艾提加（GLX顶配）');
+
+// Suzuki Alto
+mt('Suzuki Alto (2008-2012 660cc)', 'Suzuki Alto (၂၀၀၈-၂၀၁၂ 660cc)', '铃木奥拓（2008-2012 660cc）');
+mt('Suzuki Alto (2013-2016 New)', 'Suzuki Alto (၂၀၁၃-၂၀၁၆ အသစ်)', '铃木奥拓（2013-2016 新款）');
+mt('Suzuki Alto (Turbo/High)', 'Suzuki Alto (Turbo/အဆင့်မြင့်)', '铃木奥拓（Turbo/高配）');
+
+// Suzuki Jimny
+mt('Suzuki Jimny (2000-2010 Old)', 'Suzuki Jimny (၂၀၀၀-၂၀၁၀ အဟောင်း)', '铃木吉姆尼（2000-2010 老款）');
+mt('Suzuki Jimny (2011-2017 New)', 'Suzuki Jimny (၂၀၁၁-၂၀၁၇ အသစ်)', '铃木吉姆尼（2011-2017 新款）');
+mt('Suzuki Jimny (JB74)', 'Suzuki Jimny (JB74)', '铃木吉姆尼（JB74新世代）');
+
+// Suzuki Ciaz
+mt('Suzuki Ciaz (2015-2018 Base)', 'Suzuki Ciaz (၂၀၁၅-၂၀၁၈ အခြေခံ)', '铃木西亚兹（2015-2018 基础版）');
+mt('Suzuki Ciaz (2019-2022 GLX)', 'Suzuki Ciaz (၂၀၁၉-၂၀၂၂ GLX)', '铃木西亚兹（2019-2022 GLX高配）');
+
+// Suzuki Every
+mt('Suzuki Every (2008-2012 Base)', 'Suzuki Every (၂၀၀၈-၂၀၁၂ အခြေခံ)', '铃木Every（2008-2012 基础版）');
+mt('Suzuki Every (2013-2017 Join Turbo)', 'Suzuki Every (၂၀၁၃-၂၀၁၇ Join Turbo)', '铃木Every（2013-2017 Join Turbo）');
+mt('Suzuki Every (High Roof Turbo)', 'Suzuki Every (မြင့်မိုး Turbo)', '铃木Every（高顶Turbo高配）');
+
+// EV - BYD Dolphin
+mt('BYD Dolphin (Standard Range)', 'BYD Dolphin (Standard Range)', '比亚迪海豚（标准版）');
+mt('BYD Dolphin (Extended Range)', 'BYD Dolphin (Extended Range)', '比亚迪海豚（长续航版）');
+mt('BYD Dolphin (Top + Low km)', 'BYD Dolphin (Top + Low km)', '比亚迪海豚（顶配+低公里）');
+
+// BYD Atto 3
+mt('BYD Atto 3 (Standard)', 'BYD Atto 3 (Standard)', '比亚迪元PLUS（标准版）');
+mt('BYD Atto 3 (Long Range)', 'BYD Atto 3 (Long Range)', '比亚迪元PLUS（长续航版）');
+mt('BYD Atto 3 (Top Premium)', 'BYD Atto 3 (Top Premium)', '比亚迪元PLUS（顶配精品）');
+
+// BYD Seal
+mt('BYD Seal (Standard)', 'BYD Seal (Standard)', '比亚迪海豹（标准版）');
+mt('BYD Seal (AWD Performance)', 'BYD Seal (AWD Performance)', '比亚迪海豹（AWD高性能版）');
+
+mt('BYD Yangwang / Premium Series', 'BYD Yangwang / Premium', '比亚迪仰望/高端系列');
+mt('NETA V (Standard)', 'NETA V (Standard)', '哪吒V（标准版）');
+mt('NETA V (High Trim)', 'NETA V (အဆင့်မြင့်)', '哪吒V（高配版）');
+mt('NETA X SUV', 'NETA X SUV', '哪吒X SUV');
+mt('MG4 EV (Standard)', 'MG4 EV (Standard)', 'MG4 EV（标准版）');
+mt('MG4 EV (Performance)', 'MG4 EV (Performance)', 'MG4 EV（高性能版）');
+mt('Tesla Model 3 (2019-2021 Used)', 'Tesla Model 3 (၂၀၁၉-၂၀၂၁ တန်း)', 'Tesla Model 3（2019-2021 二手）');
+mt('Tesla Model 3 (2022+ New)', 'Tesla Model 3 (၂၀၂၂+ အသစ်)', 'Tesla Model 3（2022+ 新款）');
+mt('Tesla Model Y', 'Tesla Model Y', 'Tesla Model Y');
+mt('Wuling Mini EV', 'Wuling Mini EV', '五菱Mini EV');
+mt('Zeekr X', 'Zeekr X', '极氪X');
+mt('Leapmotor / 零跑', 'Leapmotor', '零跑');
+
+// Korean
+mt('Hyundai Elantra', 'Hyundai Elantra', '现代伊兰特');
+mt('Hyundai Accent', 'Hyundai Accent', '现代雅绅特');
+mt('Kia Forte', 'Kia Forte', '起亚福瑞迪');
+mt('Kia K3', 'Kia K3', '起亚K3');
+mt('Hyundai Santa Fe', 'Hyundai Santa Fe', '现代胜达');
+mt('Kia Sorento', 'Kia Sorento', '起亚索兰托');
 
 // ===== Glossary Data (Trilingual) =====
-const glossaryTerms = [
-  // Engine terms
-  { my: 'အင်ဂျင်', cn: '发动机', en: 'Engine', cat: 'engine' },
-  { my: 'ဂီယာ', cn: '变速箱', en: 'Transmission / Gearbox', cat: 'engine' },
-  { my: 'အော်တိုဂီယာ', cn: '自动变速箱', en: 'Automatic Transmission', cat: 'engine' },
-  { my: 'မန်နူယယ်ဂီယာ', cn: '手动变速箱', en: 'Manual Transmission', cat: 'engine' },
-  { my: 'ဆီ', cn: '机油', en: 'Engine Oil', cat: 'engine' },
-  { my: 'ဓာတ်ဆီ', cn: '汽油', en: 'Gasoline / Petrol', cat: 'engine' },
-  { my: 'ဒီဇယ်', cn: '柴油', en: 'Diesel', cat: 'engine' },
-  { my: 'ဘက်ထရီ', cn: '电瓶', en: 'Battery', cat: 'engine' },
-  { my: 'ဓာတ်အားပေးစက်', cn: '发电机', en: 'Alternator', cat: 'engine' },
-  { my: 'စတာတာ', cn: '启动马达', en: 'Starter Motor', cat: 'engine' },
-  { my: 'အအေးပေးစနစ်', cn: '冷却系统', en: 'Cooling System', cat: 'engine' },
-  { my: 'ရေတိုင်ကီ', cn: '水箱', en: 'Radiator', cat: 'engine' },
-  { my: 'အင်ဂျင်ဆီဇကာ', cn: '机油滤清器', en: 'Oil Filter', cat: 'engine' },
-  { my: 'လေစစ်', cn: '空气滤清器', en: 'Air Filter', cat: 'engine' },
-  { my: 'တာဘို', cn: '涡轮增压', en: 'Turbocharger', cat: 'engine' },
-  
-  // Body parts
-  { my: 'ကားကိုယ်ထည်', cn: '车身', en: 'Car Body / Chassis', cat: 'body' },
-  { my: 'ဘမ်ပါ', cn: '保险杠', en: 'Bumper', cat: 'body' },
-  { my: 'ရှေ့မီး', cn: '前大灯', en: 'Headlight', cat: 'body' },
-  { my: 'နောက်မီး', cn: '尾灯', en: 'Taillight', cat: 'body' },
-  { my: 'မှန်', cn: '挡风玻璃', en: 'Windshield', cat: 'body' },
-  { my: 'ဘေးမှန်', cn: '侧窗玻璃', en: 'Side Window', cat: 'body' },
-  { my: 'ခြံမှန်', cn: '后视镜', en: 'Side Mirror', cat: 'body' },
-  { my: 'တာယာ', cn: '轮胎', en: 'Tire', cat: 'body' },
-  { my: 'ဘီး', cn: '轮毂', en: 'Wheel / Rim', cat: 'body' },
-  { my: 'အလှဘီး', cn: '铝合金轮毂', en: 'Alloy Wheel', cat: 'body' },
-  { my: 'အမိုး', cn: '车顶', en: 'Roof', cat: 'body' },
-  { my: 'ထိုင်ခုံ', cn: '座椅', en: 'Seat', cat: 'body' },
-  { my: 'တံခါး', cn: '车门', en: 'Door', cat: 'body' },
-  { my: 'အင်ဂျင်ခန်းအဖုံး', cn: '引擎盖', en: 'Hood / Bonnet', cat: 'body' },
-  { my: 'ကားလှည်း', cn: '后备箱', en: 'Trunk / Boot', cat: 'body' },
-
-  // Interior
-  { my: 'စတီယာရင်', cn: '方向盘', en: 'Steering Wheel', cat: 'interior' },
-  { my: 'ဒက်ရှ်ဘုတ်', cn: '仪表盘', en: 'Dashboard', cat: 'interior' },
-  { my: 'အမြန်နှုန်းပြကိရိယာ', cn: '速度表', en: 'Speedometer', cat: 'interior' },
-  { my: 'လေအေးပေးစက်', cn: '空调', en: 'Air Conditioner (AC)', cat: 'interior' },
-  { my: 'စပီကာ', cn: '音响', en: 'Speaker', cat: 'interior' },
-  { my: 'CD ပလေယာ', cn: 'CD播放器', en: 'CD Player', cat: 'interior' },
-  { my: 'မျက်နှာပြင်ဖန်သားပြင်', cn: '显示屏', en: 'Display Screen', cat: 'interior' },
-  { my: 'GPS လမ်းညွှန်', cn: '导航', en: 'GPS Navigation', cat: 'interior' },
-  { my: 'ကင်မရာ', cn: '摄像头', en: 'Camera', cat: 'interior' },
-  { my: 'ရာဘာခင်း', cn: '脚垫', en: 'Floor Mat', cat: 'interior' },
-  { my: 'အတွင်းခန်းသန့်ရှင်းရေး', cn: '内饰清洁', en: 'Interior Cleaning', cat: 'interior' },
-  { my: 'လေကာကိရိယာ', cn: '行车记录仪', en: 'Dashcam', cat: 'interior' },
-  { my: 'ပါကာဆင်ဆာ', cn: '倒车雷达', en: 'Parking Sensor', cat: 'interior' },
-
-  // Documents
-  { my: 'ကားမှတ်ပုံတင်', cn: '车辆登记证', en: 'Registration Certificate', cat: 'document' },
-  { my: 'ယာဉ်မောင်းလိုင်စင်', cn: '驾驶证', en: "Driver's License", cat: 'document' },
-  { my: 'အာမခံ', cn: '保险', en: 'Insurance', cat: 'document' },
-  { my: 'အခွန်', cn: '税', en: 'Tax', cat: 'document' },
-  { my: 'ပိုင်ဆိုင်မှုလွှဲပြောင်းခြင်း', cn: '过户', en: 'Ownership Transfer', cat: 'document' },
-  { my: 'ကားစစ်ဆေးရေးလက်မှတ်', cn: '车检证', en: 'Vehicle Inspection Certificate', cat: 'document' },
-  { my: 'အကြွေးကျန်ရှိမှု', cn: '贷款余额', en: 'Outstanding Loan', cat: 'document' },
-  { my: 'အရောင်းစာချုပ်', cn: '销售合同', en: 'Sales Contract', cat: 'document' },
-  { my: 'နှစ်ချုပ်', cn: '年检', en: 'Annual Inspection', cat: 'document' },
-  { my: 'တင်သွင်းခွင့်', cn: '进口许可证', en: 'Import Permit', cat: 'document' },
-  { my: 'နောက်ဆုံးစစ်ဆေးခြင်း', cn: '过户前检查', en: 'Pre-transfer Inspection', cat: 'document' },
-];
