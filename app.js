@@ -235,25 +235,37 @@ function renderPriceTable() {
   const tbody = document.getElementById('price-tbody');
   if (!tbody) return;
   tbody.innerHTML = '';
+
+  const sectionBreaks = {
+    'Vitz|Fit|Jazz|Swift|Wish|Carry|Hilux|Crown|Alphard|Ertiga|Alto|Jimny|Ciaz|Every': 'jdm',
+    'Wuling|BYD|Neta|Voyah|EV|Electric|电动车|လျှပ်စစ်': 'ev',
+    'Hyundai|Kia|Elantra|Accent|Forte|Santa|Sorento': 'korean'
+  };
   
-  // Track which section we're in to add header rows
   let currentSection = '';
   
-  priceData.forEach((row, idx) => {
-    // Determine section based on index ranges
-    let section = '';
-    if (idx < 10) section = 'jdm';
-    else if (idx < 13) section = 'ev';
-    else section = 'korean';
+  priceData.forEach((row) => {
+    // Determine section dynamically
+    let section = 'jdm';
+    for (const [pattern, s] of Object.entries(sectionBreaks)) {
+      if (new RegExp(pattern, 'i').test(row.model)) {
+        section = s;
+        break;
+      }
+    }
+    // Last section is Korean
+    if (row.model.includes('Hyundai') || row.model.includes('Kia')) section = 'korean';
+    // EV detection
+    if (row.model.includes('EV') || row.model.includes('Wuling') || row.model.includes('BYD') || row.model.includes('Neta') || row.model.includes('Voyah')) section = 'ev';
     
     if (section !== currentSection) {
       currentSection = section;
-      const headerNames = {
-        jdm: { en: '🇯🇵 JDM (Japanese Right-Hand Drive)', my: '🇯🇵 ဂျပန်ကားများ', cn: '🇯🇵 日本右舵车（JDM）' },
-        ev: { en: '🔌 Electric Vehicles (EV)', my: '🔌 လျှပ်စစ်ကားများ', cn: '🔌 电动车（EV）' },
-        korean: { en: '🇰🇷 Korean Cars (Hyundai/Kia)', my: '🇰🇷 ကိုရီးယားကားများ', cn: '🇰🇷 韩国车（现代/起亚）' }
+      const keyMap = {
+        jdm: 'price_section_jdm',
+        ev: 'price_section_ev',
+        korean: 'price_section_korea'
       };
-      const name = headerNames[section][currentLang] || headerNames[section].en;
+      const name = t(keyMap[section]);
       const tr = document.createElement('tr');
       tr.className = 'price-section-header';
       tr.innerHTML = `<td colspan="4" style="font-weight:700;font-size:0.95rem;background:var(--primary);color:white;padding:10px 14px;border-radius:6px;text-align:center;">${name}</td>`;
@@ -262,11 +274,33 @@ function renderPriceTable() {
     
     const tr = document.createElement('tr');
     const tag = row.tag || '';
+    const yearDisplay = row.trim && row.trim !== '—' ? `${row.year}<br><small style="color:#666">[${row.trim}]</small>` : row.year;
+    // Trilingual model name
+    const modelName = currentLang === 'my' && modelTr[row.model] ? modelTr[row.model].my :
+                      currentLang === 'cn' && modelTr[row.model] ? modelTr[row.model].cn :
+                      row.model;
+    // Auto-calculate USD estimate from MMK
+    const mmkStr = row.priceMmk;
+    const rate = 4000;
+    let usdDisplay = '—';
+    const mmkMatch = mmkStr.match(/(\d+)\s*M\s*[-~]\s*(\d+)\s*M/);
+    if (mmkMatch) {
+      const low = Math.round(parseInt(mmkMatch[1]) * 1000000 / rate);
+      const high = Math.round(parseInt(mmkMatch[2]) * 1000000 / rate);
+      usdDisplay = `$${low.toLocaleString()} - $${high.toLocaleString()}`;
+    } else {
+      const singleMatch = mmkStr.match(/[~]?\s*(\d+)\s*M\+?/);
+      if (singleMatch) {
+        const v = Math.round(parseInt(singleMatch[1]) * 1000000 / rate);
+        const suffix = mmkStr.includes('+') ? '+' : '';
+        usdDisplay = `$${v.toLocaleString()}${suffix}`;
+      }
+    }
     tr.innerHTML = `
-      <td>${tag ? `${tag} ` : ''}${row.model}</td>
-      <td>${row.year}</td>
+      <td>${tag ? `${tag} ` : ''}${modelName}</td>
+      <td>${yearDisplay}</td>
       <td class="price-mmk">${row.priceMmk}</td>
-      <td class="price-usd">${row.priceUsd}</td>
+      <td class="price-usd">${usdDisplay}</td>
     `;
     tbody.appendChild(tr);
   });
