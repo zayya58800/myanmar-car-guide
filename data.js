@@ -115,7 +115,7 @@ const carModels = [
     nameEn: 'Suzuki Jimny',
     nameMy: 'ဆူဇူကီး ဂျင်နီ',
     nameCn: '铃木吉姆尼',
-    price: '35M - 800M',
+    price: '35M - 180M',
     priceUsd: '$8,750 - $45,000',
     year: '2000-2020+',
     type: 'suv',
@@ -183,17 +183,17 @@ const priceData = [
   // Toyota Hilux
   { model: 'Toyota Hilux (2010-2013 Vigo)', year: '2010-2013', trim: 'Vigo', priceMmk: '50M - 70M', tag: '🔥' },
   { model: 'Toyota Hilux (2014-2016 Vigo Champ)', year: '2014-2016', trim: 'Vigo Champ', priceMmk: '70M - 90M', tag: '🔥' },
-  { model: 'Toyota Hilux (2017-2020 Revo)', year: '2017-2020', trim: 'Revo', priceMmk: '090M - 130M', tag: '🔥' },
+  { model: 'Toyota Hilux (2017-2020 Revo)', year: '2017-2020', trim: 'Revo', priceMmk: '90M - 130M', tag: '🔥' },
   { model: 'Toyota Hilux (Rogue/Rocco)', year: '—', trim: 'High', priceMmk: '150M+', tag: '🔥' },
 
   // Toyota Crown
   { model: 'Toyota Crown (2004-2008 Royal Saloon)', year: '2004-2008', trim: 'Royal', priceMmk: '55M - 80M', tag: '🔥' },
-  { model: 'Toyota Crown (2009-2012 Athlete)', year: '2009-2012', trim: 'Athlete', priceMmk: '080M - 100M', tag: '🔥' },
+  { model: 'Toyota Crown (2009-2012 Athlete)', year: '2009-2012', trim: 'Athlete', priceMmk: '80M - 100M', tag: '🔥' },
   { model: 'Toyota Crown (Majesta V8)', year: '—', trim: 'Majesta', priceMmk: '100M - 150M', tag: '🔥' },
   { model: 'Toyota Crown (2015+ Hybrid)', year: '2015+', trim: 'Hybrid', priceMmk: '130M - 200M', tag: '🔥' },
 
   // Toyota Alphard
-  { model: 'Toyota Alphard (2010-2013 Standard)', year: '2010-2013', trim: 'Base', priceMmk: '080M - 120M', tag: '🔥' },
+  { model: 'Toyota Alphard (2010-2013 Standard)', year: '2010-2013', trim: 'Base', priceMmk: '80M - 120M', tag: '🔥' },
   { model: 'Toyota Alphard (2014-2017 SC)', year: '2014-2017', trim: 'SC', priceMmk: '130M - 200M', tag: '🔥' },
   { model: 'Toyota Alphard (Executive Lounge)', year: '—', trim: 'Top', priceMmk: '200M - 300M+', tag: '🔥' },
 
@@ -205,7 +205,7 @@ const priceData = [
   // Suzuki Alto
   { model: 'Suzuki Alto (2008-2012 660cc)', year: '2008-2012', trim: 'Base', priceMmk: '18M - 28M', tag: '🔥' },
   { model: 'Suzuki Alto (2013-2016 New)', year: '2013-2016', trim: 'New', priceMmk: '25M - 38M', tag: '🔥' },
-  { model: 'Suzuki Alto (Turbo/High)', year: '—', trim: 'Turbo', priceMmk: '040M+', tag: '🔥' },
+  { model: 'Suzuki Alto (Turbo/High)', year: '—', trim: 'Turbo', priceMmk: '40M+', tag: '🔥' },
 
   // Suzuki Jimny
   { model: 'Suzuki Jimny (2000-2010 Old)', year: '2000-2010', trim: 'Old', priceMmk: '35M - 55M', tag: '🔥' },
@@ -219,7 +219,7 @@ const priceData = [
   // Suzuki Every
   { model: 'Suzuki Every (2008-2012 Base)', year: '2008-2012', trim: 'Base', priceMmk: '25M - 38M', tag: '🔥' },
   { model: 'Suzuki Every (2013-2017 Join Turbo)', year: '2013-2017', trim: 'Turbo', priceMmk: '40M - 55M', tag: '🔥' },
-  { model: 'Suzuki Every (High Roof Turbo)', year: '—', trim: 'High', priceMmk: '060M+', tag: '🔥' },
+  { model: 'Suzuki Every (High Roof Turbo)', year: '—', trim: 'High', priceMmk: '60M+', tag: '🔥' },
   
   // ════════════════════════════════════════════════════════
   // 二、电动车（EV）— Myanmar 2026 Market
@@ -227,11 +227,11 @@ const priceData = [
 
   // BYD Dolphin
   { model: 'BYD Dolphin (Standard Range)', year: '2023', trim: 'Base', priceMmk: '65M - 85M', tag: '⚡' },
-  { model: 'BYD Dolphin (Extended Range)', year: '2024', trim: 'High', priceMmk: '85M - 100M', tag: '⚡' },
+  { model: 'BYD Dolphin (Extended Range)', year: '2024', trim: 'High', priceMmk: '85M - 110M', tag: '⚡' },
   { model: 'BYD Dolphin (Top + Low km)', year: '—', trim: 'Premium', priceMmk: '~120M', tag: '⚡' },
 
   // BYD Atto 3
-  { model: 'BYD Atto 3 (Standard)', year: '2023', trim: 'Base', priceMmk: '95M - 300M', tag: '⚡' },
+  { model: 'BYD Atto 3 (Standard)', year: '2023', trim: 'Base', priceMmk: '95M - 130M', tag: '⚡' },
   { model: 'BYD Atto 3 (Long Range)', year: '2024', trim: 'High', priceMmk: '130M - 170M', tag: '⚡' },
   { model: 'BYD Atto 3 (Top Premium)', year: '—', trim: 'Premium', priceMmk: '~180M', tag: '⚡' },
 
@@ -247,14 +247,14 @@ const priceData = [
   { model: 'NETA V (High Trim)', year: '—', trim: 'High', priceMmk: '70M - 85M', tag: '⚡' },
 
   // NETA X
-  { model: 'NETA X SUV', year: '2024', trim: '—', priceMmk: '090M - 130M', tag: '⚡' },
+  { model: 'NETA X SUV', year: '2024', trim: '—', priceMmk: '90M - 130M', tag: '⚡' },
 
   // MG4 EV
   { model: 'MG4 EV (Standard)', year: '2023-2024', trim: 'Base', priceMmk: '85M - 200M', tag: '⚡' },
   { model: 'MG4 EV (Performance)', year: '—', trim: 'High', priceMmk: '130M+', tag: '⚡' },
 
   // Tesla Model 3
-  { model: 'Tesla Model 3 (2019-2021 Used)', year: '2019-2021', trim: 'Used', priceMmk: '500M - 2.500M', tag: '⚡' },
+  { model: 'Tesla Model 3 (2019-2021 Used)', year: '2019-2021', trim: 'Used', priceMmk: '150M - 250M', tag: '⚡' },
   { model: 'Tesla Model 3 (2022+ New)', year: '2022+', trim: 'New', priceMmk: '250M - 400M', tag: '⚡' },
 
   // Tesla Model Y
@@ -267,13 +267,13 @@ const priceData = [
   { model: 'Zeekr X', year: '2024', trim: '—', priceMmk: '200M - 300M', tag: '⚡' },
 
   // Leapmotor
-  { model: 'Leapmotor / 零跑', year: '2024', trim: '—', priceMmk: '070M - 120M', tag: '⚡' },
+  { model: 'Leapmotor / 零跑', year: '2024', trim: '—', priceMmk: '70M - 120M', tag: '⚡' },
 
   // ════════════════════════════════════════════════════════
   // 三、韩国车（现代/起亚）
   // ════════════════════════════════════════════════════════
   { model: 'Hyundai Elantra', year: '2012-2017', trim: '—', priceMmk: '25M - 35M', tag: '📉' },
-  { model: 'Hyundai Accent', year: '2012-2017', trim: '—', priceMmk: '2000M - 30M', tag: '📉' },
+  { model: 'Hyundai Accent', year: '2012-2017', trim: '—', priceMmk: '20M - 30M', tag: '📉' },
   { model: 'Kia Forte', year: '2012-2017', trim: '—', priceMmk: '22M - 32M', tag: '📉' },
   { model: 'Kia K3', year: '2014-2018', trim: '—', priceMmk: '25M - 38M', tag: '📉' },
   { model: 'Hyundai Santa Fe', year: '2010-2015', trim: '—', priceMmk: '30M - 50M', tag: '📉' },
