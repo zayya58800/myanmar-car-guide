@@ -106,6 +106,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   const listingForm = document.getElementById('listing-form');
+  if (listingForm) {
+    listingForm.addEventListener('submit', function(e) {
     e.preventDefault();
     const data = new FormData(this);
     
@@ -138,7 +140,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const dataInput = document.getElementById('images-data');
     if (dataInput) dataInput.value = '';
     alert('✅ ' + (currentLang === 'my' ? 'ကားစာရင်းတင်ပြီးပါပြီ။' : (currentLang === 'cn' ? '车源已发布！' : 'Listing posted!')));
-  });
+    });
+  }
 
   // ===== Inspection Bookings =====
   loadBookings();
