@@ -1,156 +1,165 @@
-// ===== Car Models Data (Trilingual) =====
+// ===== Car Models Data (Trilingual) - Updated May 2026 =====
 const carModels = [
+  // 1300cc家用轿车 category
+  {
+    nameEn: '1300cc Sedan/Hatch (Vios/Fit/Vitz/Swift)',
+    nameMy: '1300cc ကားများ (Vios/Fit/Vitz/Swift)',
+    nameCn: '1300cc家用轿车 (Vios/威驰/Fit/飞度/Vitz/威姿/Swift/雨燕)',
+    price: '60,000,000 - 75,000,000',
+    priceUsd: '$15,000 - $18,750',
+    year: '2010-2018',
+    type: 'hatchback',
+    image: '🚗',
+    desc: '1300cc segment benchmark. The 50-60M range is gone — now 60-75M is the new normal.'
+  },
   {
     nameEn: 'Toyota Vitz',
     nameMy: 'တိုယိုတာ ဗစ်ဇ်',
     nameCn: '丰田威姿',
-    price: '22,000,000 - 35,000,000',
-    priceUsd: '$10,500 - $16,700',
+    price: '35,000,000 - 55,000,000',
+    priceUsd: '$8,750 - $13,750',
     year: '2010-2018',
     type: 'hatchback',
     image: '🚗',
-    desc: 'Most popular used car in Myanmar. Fuel efficient, easy maintenance.'
+    desc: '1000cc daily driver favorite. Most affordable entry-level Japanese car.'
   },
   {
     nameEn: 'Honda Fit / Jazz',
     nameMy: 'ဟွန်ဒါ ဖစ် / ဂျက်ဇ်',
     nameCn: '本田飞度',
-    price: '25,000,000 - 40,000,000',
-    priceUsd: '$11,900 - $19,000',
+    price: '55,000,000 - 75,000,000',
+    priceUsd: '$13,750 - $18,750',
     year: '2012-2020',
     type: 'hatchback',
     image: '🚙',
-    desc: 'Spacious interior, reliable engine, great resale value.'
-  },
-  {
-    nameEn: 'Suzuki Carry',
-    nameMy: 'ဆူဇူကီး ကယ်ရီ',
-    nameCn: '铃木卡里',
-    price: '15,000,000 - 25,000,000',
-    priceUsd: '$7,100 - $11,900',
-    year: '2008-2019',
-    type: 'truck',
-    image: '🛻',
-    desc: 'Workhorse pickup for business. Durable and cheap parts.'
-  },
-  {
-    nameEn: 'Toyota Hilux',
-    nameMy: 'တိုယိုတာ ဟိုင်လပ်',
-    nameCn: '丰田海拉克斯',
-    price: '40,000,000 - 80,000,000',
-    priceUsd: '$19,000 - $38,100',
-    year: '2010-2023',
-    type: 'pickup',
-    image: '🛻',
-    desc: 'The legendary pickup. Unmatched durability and off-road capability.'
-  },
-  {
-    nameEn: 'Toyota Crown',
-    nameMy: 'တိုယိုတာ ခရောင်း',
-    nameCn: '丰田皇冠',
-    price: '50,000,000 - 90,000,000',
-    priceUsd: '$23,800 - $42,900',
-    year: '2010-2020',
-    type: 'sedan',
-    image: '🚘',
-    desc: 'Premium sedan, very popular with executives and businessmen in Myanmar.'
-  },
-  {
-    nameEn: 'Nissan Sunny',
-    nameMy: 'နစ္စန် ဆန်နီ',
-    nameCn: '日产阳光',
-    price: '15,000,000 - 25,000,000',
-    priceUsd: '$7,100 - $11,900',
-    year: '2010-2018',
-    type: 'sedan',
-    image: '🚗',
-    desc: 'Affordable sedan, good fuel economy, easy to maintain.'
-  },
-  {
-    nameEn: 'Mitsubishi Pajero',
-    nameMy: 'မစ်ဆူဘီရှီ ပါဂျေရို',
-    nameCn: '三菱帕杰罗',
-    price: '35,000,000 - 65,000,000',
-    priceUsd: '$16,700 - $31,000',
-    year: '2008-2018',
-    type: 'suv',
-    image: '🚙',
-    desc: 'Powerful SUV, great for rough terrains common in Myanmar.'
-  },
-  {
-    nameEn: 'Toyota Wish',
-    nameMy: 'တိုယိုတာ ဝစ်ရှ်',
-    nameCn: '丰田逸致',
-    price: '28,000,000 - 42,000,000',
-    priceUsd: '$13,300 - $20,000',
-    year: '2010-2017',
-    type: 'mpv',
-    image: '🚐',
-    desc: 'Family MPV with 7 seats. Practical for large families.'
-  },
-  {
-    nameEn: 'Honda City',
-    nameMy: 'ဟွန်ဒါ စီးတီး',
-    nameCn: '本田城市',
-    price: '20,000,000 - 35,000,000',
-    priceUsd: '$9,500 - $16,700',
-    year: '2012-2020',
-    type: 'sedan',
-    image: '🚗',
-    desc: 'Compact sedan, stylish design, popular with young professionals.'
+    desc: '1300cc hard currency. Extremely value-retaining, a market icon.'
   },
   {
     nameEn: 'Suzuki Swift',
     nameMy: 'ဆူဇူကီး ဆွစ်ဖ်',
     nameCn: '铃木雨燕',
-    price: '16,000,000 - 28,000,000',
-    priceUsd: '$7,600 - $13,300',
+    price: '35,000,000 - 50,000,000',
+    priceUsd: '$8,750 - $12,500',
     year: '2012-2020',
     type: 'hatchback',
     image: '🚗',
-    desc: 'Small, fun hatchback. Great for city driving and parking.'
+    desc: 'Stylish hatchback, first choice for young drivers.'
+  },
+  // Micro trucks / vans
+  {
+    nameEn: 'Mini Truck / Van (Hijet/Carry)',
+    nameMy: 'ထရပ်ကားသေး / ဗန်ကား (Hijet/Carry)',
+    nameCn: '小货车/微卡 (Hijet/海狮/Carry/卡里)',
+    price: '45,000,000 - 60,000,000',
+    priceUsd: '$11,250 - $15,000',
+    year: '2008-2019',
+    type: 'truck',
+    image: '🛻',
+    desc: 'Average condition from 45M, good condition 50M+. Prices tripled in 3 years.'
+  },
+  {
+    nameEn: '660cc Mini Truck (Old)',
+    nameMy: '660cc ထရပ်ကားသေး (အဟောင်း)',
+    nameCn: '660cc微卡（老款）',
+    price: '18,000,000 - 25,000,000',
+    priceUsd: '$4,500 - $6,250',
+    year: '2004-2010',
+    type: 'truck',
+    image: '🛻',
+    desc: 'Doubled in 3 years. Post-2014 high-spec models are even more expensive.'
+  },
+  {
+    nameEn: 'Suzuki Carry',
+    nameMy: 'ဆူဇူကီး ကယ်ရီ',
+    nameCn: '铃木卡里',
+    price: '45,000,000 - 60,000,000',
+    priceUsd: '$11,250 - $15,000',
+    year: '2008-2019',
+    type: 'truck',
+    image: '🛻',
+    desc: 'Work truck for business. Cheap parts, durable.'
+  },
+  {
+    nameEn: 'Toyota Hilux',
+    nameMy: 'တိုယိုတာ ဟိုင်လပ်',
+    nameCn: '丰田海拉克斯',
+    price: '50,000,000 - 90,000,000',
+    priceUsd: '$12,500 - $22,500',
+    year: '2010-2023',
+    type: 'pickup',
+    image: '🛻',
+    desc: 'Old model from 50M, new Revo can reach 90M+. Legendary durability.'
+  },
+  {
+    nameEn: 'Toyota Crown',
+    nameMy: 'တိုယိုတာ ခရောင်း',
+    nameCn: '丰田皇冠',
+    price: '60,000,000 - 120,000,000',
+    priceUsd: '$15,000 - $30,000',
+    year: '2010-2020',
+    type: 'sedan',
+    image: '🚘',
+    desc: 'Premium business sedan. Early models from 60M. A Myanmar status car.'
   },
   {
     nameEn: 'Toyota Alphard',
     nameMy: 'တိုယိုတာ အယ်လ်ဖတ်',
     nameCn: '丰田埃尔法',
-    price: '80,000,000 - 150,000,000',
-    priceUsd: '$38,100 - $71,400',
+    price: '80,000,000 - 200,000,000',
+    priceUsd: '$20,000 - $50,000',
     year: '2010-2020',
     type: 'mpv',
     image: '🚐',
-    desc: 'Luxury MPV. The ultimate status symbol in Myanmar.'
+    desc: 'The ultimate status symbol. Top-tier luxury MPV.'
   },
   {
-    nameEn: 'Mazda 3',
-    nameMy: 'မာဇဒါ ၃',
-    nameCn: '马自达3',
-    price: '22,000,000 - 38,000,000',
-    priceUsd: '$10,500 - $18,100',
-    year: '2012-2020',
-    type: 'sedan',
-    image: '🚗',
-    desc: 'Sporty sedan with great handling. Stylish interior.'
+    nameEn: 'Toyota Wish',
+    nameMy: 'တိုယိုတာ ဝစ်ရှ်',
+    nameCn: '丰田逸致',
+    price: '45,000,000 - 65,000,000',
+    priceUsd: '$11,250 - $16,250',
+    year: '2010-2017',
+    type: 'mpv',
+    image: '🚐',
+    desc: 'Practical 7-seat MPV for families.'
   }
 ];
 
-// ===== Price Data =====
+// ===== Price Data - Updated May 2026 =====
 const priceData = [
-  { model: 'Toyota Vitz', year: '2013', priceMmk: '22-28 M', priceUsd: '$10.5K - $13.3K' },
-  { model: 'Toyota Vitz', year: '2016', priceMmk: '28-35 M', priceUsd: '$13.3K - $16.7K' },
-  { model: 'Honda Fit', year: '2014', priceMmk: '25-32 M', priceUsd: '$11.9K - $15.2K' },
-  { model: 'Honda Fit', year: '2018', priceMmk: '33-40 M', priceUsd: '$15.7K - $19.0K' },
-  { model: 'Suzuki Carry', year: '2015', priceMmk: '15-20 M', priceUsd: '$7.1K - $9.5K' },
-  { model: 'Toyota Hilux', year: '2015', priceMmk: '40-55 M', priceUsd: '$19.0K - $26.2K' },
-  { model: 'Toyota Hilux', year: '2020', priceMmk: '60-80 M', priceUsd: '$28.6K - $38.1K' },
-  { model: 'Toyota Crown', year: '2013', priceMmk: '50-65 M', priceUsd: '$23.8K - $31.0K' },
-  { model: 'Toyota Crown', year: '2018', priceMmk: '70-90 M', priceUsd: '$33.3K - $42.9K' },
-  { model: 'Nissan Sunny', year: '2015', priceMmk: '15-22 M', priceUsd: '$7.1K - $10.5K' },
-  { model: 'Mitsubishi Pajero', year: '2012', priceMmk: '35-48 M', priceUsd: '$16.7K - $22.9K' },
-  { model: 'Suzuki Swift', year: '2016', priceMmk: '18-25 M', priceUsd: '$8.6K - $11.9K' },
-  { model: 'Toyota Alphard', year: '2015', priceMmk: '80-110 M', priceUsd: '$38.1K - $52.4K' },
-  { model: 'Toyota Wish', year: '2014', priceMmk: '28-36 M', priceUsd: '$13.3K - $17.1K' },
-  { model: 'Mazda 3', year: '2017', priceMmk: '25-35 M', priceUsd: '$11.9K - $16.7K' },
+  // ════════════════════════════════════════════════════════
+  // 一、日本右舵车（JDM）— 市场绝对主力，价格大涨
+  // ════════════════════════════════════════════════════════
+  // 1300cc家用轿车
+  { model: '1300cc Sedan (Vios/Fit/Vitz/Swift)', year: '2010-2018', priceMmk: '60-75 M', priceUsd: '$15K - $18.8K', tag: '🔥' },
+  { model: 'Toyota Vitz', year: '2010-2018', priceMmk: '35-55 M', priceUsd: '$8.8K - $13.8K', tag: '🔥' },
+  { model: 'Honda Fit / Jazz', year: '2012-2020', priceMmk: '55-75 M', priceUsd: '$13.8K - $18.8K', tag: '🔥' },
+  { model: 'Suzuki Swift', year: '2012-2020', priceMmk: '35-50 M', priceUsd: '$8.8K - $12.5K', tag: '🔥' },
+  // 小货车
+  { model: 'Mini Truck (Hijet/Carry)', year: '2008-2019', priceMmk: '45-60 M', priceUsd: '$11.3K - $15K', tag: '🔥' },
+  { model: '660cc Mini Truck (Old)', year: '2004-2010', priceMmk: '18-25 M', priceUsd: '$4.5K - $6.3K', tag: '🔥' },
+  // 皮卡/轿车/MPV
+  { model: 'Toyota Hilux', year: '2010-2023', priceMmk: '50-90 M', priceUsd: '$12.5K - $22.5K', tag: '🔥' },
+  { model: 'Toyota Crown', year: '2010-2020', priceMmk: '60-120 M', priceUsd: '$15K - $30K', tag: '🔥' },
+  { model: 'Toyota Alphard', year: '2010-2020', priceMmk: '80-200 M', priceUsd: '$20K - $50K', tag: '🔥' },
+  { model: 'Toyota Wish', year: '2010-2017', priceMmk: '45-65 M', priceUsd: '$11.3K - $16.3K', tag: '🔥' },
+  
+  // ════════════════════════════════════════════════════════
+  // 二、电动车（EV）— 需求旺盛，价格普涨
+  // ════════════════════════════════════════════════════════
+  { model: 'Entry EV (Wuling Mini EV etc.)', year: '2022-2024', priceMmk: '80-120 M', priceUsd: '$20K - $30K', tag: '⚡' },
+  { model: 'Mid-Range EV (BYD Dolphin/Atto 3/Neta V)', year: '2023-2025', priceMmk: '150-250 M', priceUsd: '$37.5K - $62.5K', tag: '⚡' },
+  { model: 'Premium EV (BYD Seal/Voyah FREE)', year: '2024', priceMmk: '300-350 M', priceUsd: '$75K - $87.5K', tag: '⚡' },
+  
+  // ════════════════════════════════════════════════════════
+  // 三、韩国车（现代/起亚）— 非主流，价格偏低
+  // ════════════════════════════════════════════════════════
+  { model: 'Hyundai Elantra', year: '2012-2017', priceMmk: '25-35 M', priceUsd: '$6.3K - $8.8K', tag: '📉' },
+  { model: 'Hyundai Accent', year: '2012-2017', priceMmk: '20-30 M', priceUsd: '$5K - $7.5K', tag: '📉' },
+  { model: 'Kia Forte', year: '2012-2017', priceMmk: '22-32 M', priceUsd: '$5.5K - $8K', tag: '📉' },
+  { model: 'Kia K3', year: '2014-2018', priceMmk: '25-38 M', priceUsd: '$6.3K - $9.5K', tag: '📉' },
+  { model: 'Hyundai Santa Fe', year: '2010-2015', priceMmk: '30-50 M', priceUsd: '$7.5K - $12.5K', tag: '📉' },
+  { model: 'Kia Sorento', year: '2010-2015', priceMmk: '30-50 M', priceUsd: '$7.5K - $12.5K', tag: '📉' },
 ];
 
 // ===== Glossary Data (Trilingual) =====
