@@ -390,3 +390,72 @@ mt('Hyundai Santa Fe', 'Hyundai Santa Fe', '现代胜达');
 mt('Kia Sorento', 'Kia Sorento', '起亚索兰托');
 
 // ===== Glossary Data (Trilingual) =====
+const glossaryTerms = [
+  // Engine / Mechanical
+  { en: 'Engine', my: 'အင်ဂျင်', cn: '发动机', cat: 'engine' },
+  { en: 'Engine Oil', my: 'အင်ဂျင်ဆီ', cn: '机油', cat: 'engine' },
+  { en: 'Transmission', my: 'ဂီယာ', cn: '变速箱', cat: 'engine' },
+  { en: 'Automatic Transmission', my: 'အော်တိုဂီယာ', cn: '自动挡', cat: 'engine' },
+  { en: 'Manual Transmission', my: 'မန်နျူယယ်ဂီယာ', cn: '手动挡', cat: 'engine' },
+  { en: 'Clutch', my: 'ကလပ်ချ်', cn: '离合器', cat: 'engine' },
+  { en: 'Brake', my: 'ဘရိတ်', cn: '刹车', cat: 'engine' },
+  { en: 'ABS', my: 'ABS', cn: '防抱死系统', cat: 'engine' },
+  { en: 'Turbo', my: 'တာဘို', cn: '涡轮增压', cat: 'engine' },
+  { en: 'Battery', my: 'ဘက်ထရီ', cn: '电池', cat: 'engine' },
+  { en: 'Radiator', my: 'ရေတိုင်ကီ', cn: '水箱', cat: 'engine' },
+  { en: 'Alternator', my: 'အော်တာနေတာ', cn: '发电机', cat: 'engine' },
+  { en: 'Starter', my: 'စတာတာ', cn: '起动机', cat: 'engine' },
+
+  // Body / Exterior
+  { en: 'Chassis Number / VIN', my: 'ကိုယ်ထည်နံပါတ်', cn: '车架号 / VIN', cat: 'body' },
+  { en: 'Engine Number', my: 'အင်ဂျင်နံပါတ်', cn: '发动机号', cat: 'body' },
+  { en: 'Tire', my: 'တာယာ', cn: '轮胎', cat: 'body' },
+  { en: 'Rim', my: 'ဘီးလုံး', cn: '轮毂', cat: 'body' },
+  { en: 'Headlight', my: 'ရှေ့မီး', cn: '大灯', cat: 'body' },
+  { en: 'Taillight', my: 'နောက်မီး', cn: '尾灯', cat: 'body' },
+  { en: 'Windshield', my: 'လေကာမှန်', cn: '挡风玻璃', cat: 'body' },
+  { en: 'Bumper', my: 'ဘန်ပါ', cn: '保险杠', cat: 'body' },
+  { en: 'Suspension', my: 'ဆိုင်းထိန်း', cn: '悬挂', cat: 'body' },
+  { en: 'Shock Absorber', my: 'ရှော့အပ်ဆော်ဘာ', cn: '减震器', cat: 'body' },
+  { en: 'Side Mirror', my: 'ကြည့်မှန်', cn: '后视镜', cat: 'body' },
+  { en: 'Paint', my: 'ဆေးသုတ်', cn: '车漆', cat: 'body' },
+  { en: 'Rust', my: 'သံချေး', cn: '生锈', cat: 'body' },
+  { en: 'Dent', my: 'အချိုင့်', cn: '凹陷', cat: 'body' },
+  { en: 'Scratch', my: 'ခြစ်ရာ', cn: '刮痕', cat: 'body' },
+
+  // Interior
+  { en: 'Air Conditioner / AC', my: 'လေအေးပေးစက်', cn: '空调', cat: 'interior' },
+  { en: 'Steering Wheel', my: 'စတီယာရင်', cn: '方向盘', cat: 'interior' },
+  { en: 'Seat', my: 'ထိုင်ခုံ', cn: '座椅', cat: 'interior' },
+  { en: 'Leather Seat', my: 'သားရေထိုင်', cn: '真皮座椅', cat: 'interior' },
+  { en: 'Dashboard', my: 'ဒက်ရှ်ဘုတ်', cn: '仪表盘', cat: 'interior' },
+  { en: 'Odometer / Mileage', my: 'မိုင်အကွာအဝေး', cn: '里程表', cat: 'interior' },
+  { en: 'Speedometer', my: 'အမြန်နှုန်းပြကိရိယာ', cn: '速度表', cat: 'interior' },
+  { en: 'GPS / Navigation', my: 'GPS / လမ်းပြစနစ်', cn: '导航', cat: 'interior' },
+  { en: 'Audio System', my: 'အသံစနစ်', cn: '音响', cat: 'interior' },
+  { en: 'Sunroof', my: 'နေရောင်မိုး', cn: '天窗', cat: 'interior' },
+
+  // Documents & Legal
+  { en: 'Registration Book', my: 'မှတ်ပုံတင်စာအုပ်', cn: '登记证/车本', cat: 'document' },
+  { en: 'Owner Book', my: 'ပိုင်ရှင်စာအုပ်', cn: '车主证', cat: 'document' },
+  { en: 'Import Documents', my: 'တင်သွင်းစာရွက်စာတမ်း', cn: '进口文件', cat: 'document' },
+  { en: 'Tax Clearance', my: 'အခွန်ရှင်းလင်းရေး', cn: '完税证明', cat: 'document' },
+  { en: 'Insurance Paper', my: 'အာမခံစာရွက်', cn: '保险单', cat: 'document' },
+  { en: 'Transfer Deed', my: 'လွှဲပြောင်းစာချုပ်', cn: '过户文件', cat: 'document' },
+  { en: 'License Plate', my: 'နံပါတ်ပြား', cn: '车牌', cat: 'document' },
+  { en: 'Inspection Certificate', my: 'စစ်ဆေးရေးလက်မှတ်', cn: '检验证书', cat: 'document' },
+  { en: 'Power of Attorney', my: 'ရှေ့နေအာဏာ', cn: '授权书', cat: 'document' },
+  { en: 'Road Tax', my: 'လမ်းခွန်', cn: '道路税', cat: 'document' },
+  { en: 'Import Permit', my: 'တင်သွင်းခွင့်', cn: '进口许可证', cat: 'document' },
+  { en: 'Wheel Tax', my: 'ဘီးခွန်', cn: '轮税', cat: 'document' },
+
+  // Buying & Selling
+  { en: 'Used Car', my: 'ကားဟောင်း', cn: '二手车', cat: 'document' },
+  { en: 'Down Payment', my: 'ကြိုပေးငွေ', cn: '首付', cat: 'document' },
+  { en: 'Installment', my: 'အရစ်ကျ', cn: '分期付款', cat: 'document' },
+  { en: 'Loan', my: 'ချေးငွေ', cn: '贷款', cat: 'document' },
+  { en: 'Broker', my: 'ပွဲစား', cn: '中介', cat: 'document' },
+  { en: 'Negotiable', my: 'ညှိနှိုင်းလို့ရ', cn: '可议价', cat: 'document' },
+  { en: 'Deposit', my: 'အပ်ငွေ', cn: '押金', cat: 'document' },
+  { en: 'Cash', my: 'ငွေသား', cn: '现金', cat: 'document' }
+];
