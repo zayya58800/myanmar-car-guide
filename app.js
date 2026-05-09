@@ -236,10 +236,34 @@ function renderPriceTable() {
   if (!tbody) return;
   tbody.innerHTML = '';
   
-  priceData.forEach(row => {
+  // Track which section we're in to add header rows
+  let currentSection = '';
+  
+  priceData.forEach((row, idx) => {
+    // Determine section based on index ranges
+    let section = '';
+    if (idx < 10) section = 'jdm';
+    else if (idx < 13) section = 'ev';
+    else section = 'korean';
+    
+    if (section !== currentSection) {
+      currentSection = section;
+      const headerNames = {
+        jdm: { en: '🇯🇵 JDM (Japanese Right-Hand Drive)', my: '🇯🇵 ဂျပန်ကားများ', cn: '🇯🇵 日本右舵车（JDM）' },
+        ev: { en: '🔌 Electric Vehicles (EV)', my: '🔌 လျှပ်စစ်ကားများ', cn: '🔌 电动车（EV）' },
+        korean: { en: '🇰🇷 Korean Cars (Hyundai/Kia)', my: '🇰🇷 ကိုရီးယားကားများ', cn: '🇰🇷 韩国车（现代/起亚）' }
+      };
+      const name = headerNames[section][currentLang] || headerNames[section].en;
+      const tr = document.createElement('tr');
+      tr.className = 'price-section-header';
+      tr.innerHTML = `<td colspan="4" style="font-weight:700;font-size:0.95rem;background:var(--primary);color:white;padding:10px 14px;border-radius:6px;text-align:center;">${name}</td>`;
+      tbody.appendChild(tr);
+    }
+    
     const tr = document.createElement('tr');
+    const tag = row.tag || '';
     tr.innerHTML = `
-      <td>${row.model}</td>
+      <td>${tag ? `${tag} ` : ''}${row.model}</td>
       <td>${row.year}</td>
       <td class="price-mmk">${row.priceMmk}</td>
       <td class="price-usd">${row.priceUsd}</td>
